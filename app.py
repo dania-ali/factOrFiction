@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 
+from analysis import analyze_claim
+
 app = Flask(__name__)
 
 
@@ -11,7 +13,8 @@ def index():
 @app.route("/analyze", methods=["POST"])
 def analyze():
     claim = request.form.get("claim", "").strip()
-    return render_template("index.html", claim=claim)
+    result = analyze_claim(claim) if claim else None
+    return render_template("index.html", claim=claim, result=result)
 
 
 if __name__ == "__main__":
