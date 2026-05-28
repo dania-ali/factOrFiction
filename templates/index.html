@@ -22,11 +22,20 @@
 
 <section class="analysis-section">
     <h2>Analysis</h2>
+    {% if result %}
+    <p>{{ result.explanation }}</p>
+    {% else %}
     <p>[ Analysis breakdown will appear here ]</p>
+    {% endif %}
 </section>
 
 <section class="results-section">
     <h2>Results</h2>
+    {% if result %}
+    <p><strong>Score:</strong> {{ result.score }} / 100</p>
+    <p><strong>Verdict:</strong> {{ result.label }}</p>
+    {% else %}
     <p>[ Credibility score and verdict will appear here ]</p>
+    {% endif %}
 </section>
 {% endblock %}
