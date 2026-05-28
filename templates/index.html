@@ -8,7 +8,16 @@
 
 <section class="input-section">
     <h2>Submit a Claim</h2>
-    <p>[ Input form coming soon ]</p>
+    <form action="/analyze" method="POST">
+        <textarea name="claim" rows="4" placeholder="Paste a claim, headline, or social media post..."></textarea>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if claim %}
+    <div class="submitted-claim">
+        <h3>You submitted:</h3>
+        <p>{{ claim }}</p>
+    </div>
+    {% endif %}
 </section>
 
 <section class="analysis-section">
