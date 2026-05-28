@@ -6,6 +6,28 @@
     <p>Paste a claim, headline, or social media post below to evaluate its credibility.</p>
 </section>
 
+<section class="examples-section">
+    <h2>Try an Example</h2>
+    <div class="example-claims">
+        <form method="POST" action="/analyze">
+            <input type="hidden" name="claim" value="A new study confirmed that regular exercise reduces stress levels with strong evidence.">
+            <button type="submit" class="example-btn">A new study confirmed that exercise reduces stress levels.</button>
+        </form>
+        <form method="POST" action="/analyze">
+            <input type="hidden" name="claim" value="Scientists have proven this theory with data and research evidence.">
+            <button type="submit" class="example-btn">Scientists have proven a theory with data and research evidence.</button>
+        </form>
+        <form method="POST" action="/analyze">
+            <input type="hidden" name="claim" value="This is a hoax and a scam — the whole story was debunked as fake.">
+            <button type="submit" class="example-btn">This is a hoax and a scam — the story was debunked as fake.</button>
+        </form>
+        <form method="POST" action="/analyze">
+            <input type="hidden" name="claim" value="A researcher says the economy may be slowing down.">
+            <button type="submit" class="example-btn">A researcher says the economy may be slowing down.</button>
+        </form>
+    </div>
+</section>
+
 <section class="input-section">
     <h2>Submit a Claim</h2>
     <form action="/analyze" method="POST">

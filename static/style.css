@@ -45,3 +45,28 @@ section {
     padding-left: 0;
     padding-right: 0;
 }
+
+/* Example claims */
+.example-claims {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.example-btn {
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.example-btn:hover {
+    background: #f0f0f0;
+    border-color: #888;
+}
