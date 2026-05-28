@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <header>
+        <nav class="site-nav">
+            <span class="site-title">Fact or Fiction</span>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
     <div class="container">
         {% block content %}{% endblock %}
     </div>
